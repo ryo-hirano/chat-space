@@ -28,7 +28,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 |user_id|integer|null: false|
 
 ### Association
