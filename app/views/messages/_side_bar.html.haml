@@ -1,0 +1,20 @@
+!!!
+%html
+  %body
+    .side-bar
+      .side-bar__user-name
+        .side-bar__user-name__name-box
+          .side-bar__user-name__name-box__name
+            masa
+          .side-bar__user-name__name-box__icon
+            = link_to "#", class:"side-bar__user-name__name-box__icon__edit" do
+              %i.far.fa-edit
+            = link_to "#", class:"side-bar__user-name__name-box__icon__cog" do
+              %i.fa.fa-cog
+      .side-bar__group-list
+        .side-bar__group-list__groups
+          %p.side-bar__group-list__groups__group-name techcamp
+          %p.side-bar__group-list__groups__group-messages まだメッセージがありません
+        .side-bar__group-list__groups
+          %p.side-bar__group-list__groups__group-name techcamp栄校
+          %p.side-bar__group-list__groups__group-messages まだメッセージがありません
