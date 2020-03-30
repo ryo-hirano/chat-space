@@ -10,19 +10,15 @@
             .side-bar__user-name__name-box__icon__edit
               = link_to new_group_path do
                 %i.far.fa-edit
-            .side-bar__user-name__name-box__icon__cog
               = link_to edit_user_path(current_user) do
                 %i.fa.fa-cog
       .side-bar__group-list
         .side-bar__group-list__groups
           - current_user.groups.each do |group|
             .group
-              = link_to '#' do
+              = link_to group_messages_path(group) do
                 .side-bar__group-list__groups__group-name
                   = group.name
                 .side-bar__group-list__groups__group-messages
-                  メッセージはまだありません。
-
-
-          -# %p.side-bar__group-list__groups__group-name techcamp
-          -# %p.side-bar__group-list__groups__group-messages まだメッセージがありません
+                  = group.show_last_message
+                  
