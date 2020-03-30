@@ -3,6 +3,8 @@
 }
 
 .wrapper {
+  height: 100vh;
+  width: 100vw;
   display: flex;
 }
 
@@ -35,10 +37,10 @@
               &__edit{
                 color: #ffffff;
                 text-decoration: none;
-              }
-              &__cog{
-                color: #ffffff;
-                padding-left: 5px;
+                a {
+                  color: white;
+                  text-decoration: none;
+                }
               }
             }
       }
@@ -82,8 +84,7 @@
 }
 
 .chat-main {
-  height: 100vh;
-  width: calc(100vw - 300px);
+  width: 100vw;
   background-color: #ffffff;
 
   &__group-info{
@@ -125,6 +126,7 @@
   &__message-list{
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
+    overflow: scroll;
     background-color: #fafafa;
     &__message{
       &__top{
@@ -140,30 +142,13 @@
           margin: 35px 0 0 5px;
         }
       }
-      &__text{
-        color: #434A54;
-        font-size: 14px;
-        margin: 15px 0 0 40px;
-      }
-    }
-    &__message{
-      &__top{
-        display: flex;
-        &__name{
-          color: #333333;
-          font-size: 16px;
-          margin: 35px 0 0 40px;
+
+      &__low{
+        &__text{
+          color: #434A54;
+          font-size: 14px;
+          margin: 15px 0 0 40px;
         }
-        &__date{
-          color: #999999;
-          font-size: 12px;
-          margin: 35px 0 0 5px;
-        }
-      }
-      &__text{
-        color: #434A54;
-        font-size: 14px;
-        margin: 15px 0 0 40px;
       }
     }
   }
@@ -191,16 +176,17 @@
         margin-right: 10px;
         cursor: pointer;
         font-size: x-large;
-        &__input{
-          display: none;
-        }
+          input{
+            display: none;
+          }
+        
       }
       &__text{
         height: 50px;
         width: 100%;
         padding-left: 10px; 
         }
-    }
+      }
 
     &__send{
       display: block;
@@ -210,6 +196,11 @@
       color: #ffffff;
       background-color: #38aef0;
       cursor: pointer;
-    }
-  } 
+      }
+  }
+}
+
+.new_message{
+  width: 100%;
+  display: flex;
 }
