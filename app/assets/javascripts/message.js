@@ -2,7 +2,7 @@ $(function(){
     function buildHTML(message){
       if ( message.image ) {
         var html =
-        `<div class="chat-main__message-list__message">
+        `<div class="chat-main__message-list__message" data-message-id=${message.id}>
           <div class="chat-main__message-list__message__top">
             <div class="chat-main__message-list__message__top__name">
               ${message.user_name}
@@ -10,18 +10,12 @@ $(function(){
             <div class="chat-main__message-list__message__top__date">
               ${message.created_at}
             </div>
-          </div>
-          <div class="chat-main__message-list__message__low">
-            <p class="chat-main__message-list__message__low__text">
-              ${message.content}
-            </p>
-          </div>
-          <img src=${message.content} >
+          <img src=${message,image} >
         </div>`
       return html;
     } else {
       var html =
-        `<div class="chat-main__message-list__message">
+        `<div class="chat-main__message-list__message" data-message-id=${message.id}>
           <div class="chat-main__message-list__message__top">
             <div class="chat-main__message-list__message__top__name">
               ${message.user_name}
@@ -65,7 +59,7 @@ $(function(){
     });
   })
       var reloadMessages = function() {
-        var last_message_id = $('.chat-main__message-list:last').data("message-id");
+        var last_message_id = $('.chat-main__message-list__message:last').data("message-id");
         $.ajax({
           url: "api/messages",
           type: 'get',
