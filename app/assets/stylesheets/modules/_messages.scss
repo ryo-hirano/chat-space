@@ -68,6 +68,8 @@
       &__groups{
         width: 300px;
         padding: 20px 0 40px 0;
+        a {
+          text-decoration: none;
           &__group-name{
             font-size: 15px;
             color: #ffffff;
@@ -80,6 +82,7 @@
             padding-left: 20px;
           }
       }
+    }
   }
 }
 
