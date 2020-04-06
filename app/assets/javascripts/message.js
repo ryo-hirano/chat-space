@@ -10,8 +10,13 @@ $(function(){
             <div class="chat-main__message-list__message__top__date">
               ${message.created_at}
             </div>
-          <img src=${message,image} >
-        </div>`
+          </div>
+          <div class="chat-main__message-list__message__low">
+            <p class="chat-main__message-list__message__low__text">
+              ${message.content}
+            </p>
+              <img src=${message.image} >
+          </div>`
       return html;
     } else {
       var html =
